@@ -9,7 +9,7 @@
         <!--直播-->
         <scene sceneID="U8P-0B-w5t">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r3i-Yw-jt4" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r3i-Yw-jt4" customClass="NavgationViewController" customModule="DouYZB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="直播" image="btn_live_normal" selectedImage="btn_live_selected" id="y2h-rV-G1f"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

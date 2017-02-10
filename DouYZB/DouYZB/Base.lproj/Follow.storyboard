@@ -9,7 +9,7 @@
         <!--关注-->
         <scene sceneID="Jrg-kP-g0F">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R4n-ge-ZvY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R4n-ge-ZvY" customClass="NavgationViewController" customModule="DouYZB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="关注" image="btn_column_normal" selectedImage="btn_column_selected" id="oxe-vd-om8"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

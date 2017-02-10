@@ -8,8 +8,44 @@
 
 import UIKit
 
+private let kTitleViewHeight : CGFloat = 40
+
 class HomeViewController: UIViewController {
+    //MARK:- 懒加载属性
+    //懒加载格式： var 属性名 ： class = { 定义属性 }()
+    fileprivate lazy var pageTitleView : PageTitleView = {[weak self] in
+        let titleFrame = CGRect(x: 0, y: 0, width: kScreenWidth, height: kTitleViewHeight)
+        let titles = ["推荐", "游戏", "娱乐", "趣玩"]
+        let titleView = PageTitleView(frame: titleFrame, titles: titles)
+        titleView.delegate = self
+        
+        return titleView
+    }()
     
+    fileprivate lazy var pageContentView : PageContentView = {[weak self] in
+        
+        let contentViewFrame = CGRect(x: 0, y: kTitleViewHeight, width: kScreenWidth, height: kScreenHeight - kTitleViewHeight - kNavgationBHeight - kTabBarHeight)
+    
+        var childVCs = [UIViewController]()
+        
+        childVCs.append(RecommendViewController())
+        
+        for _ in 0..<3 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor.randomColor()
+            
+            childVCs.append(vc)
+        }
+        
+        let  contentView = PageContentView(frame: contentViewFrame, childVCs: childVCs, parentViewController: self)
+        
+        contentView.delegate = self
+        
+        
+        return contentView
+    }()
+    
+    //MARK:- 系统回调函数
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -27,11 +63,20 @@ class HomeViewController: UIViewController {
 //MARK: - 设置UI界面
 extension HomeViewController {
     
-    fileprivate func setupUI()
-    {
-        //1.设置导航栏
+    fileprivate func setupUI(){
+        
+        //0. 不需要调整scrollView的内边距
+        automaticallyAdjustsScrollViewInsets = false
+        
+        //1. 设置导航栏
         setupNavgationBar()
         
+        //2. 添加titleView
+        view.addSubview(pageTitleView)
+        
+        //3. 添加contentView
+        view.addSubview(pageContentView)
+        pageContentView.backgroundColor = UIColor.red
     }
     
     //设置导航栏按钮
@@ -50,4 +95,18 @@ extension HomeViewController {
         navigationItem.rightBarButtonItems = [historyItem, searchItem, qrcodeItem];
     }
     
+}
+
+// MARK:- 遵守PageTitleViewDelegate 协议
+extension HomeViewController : PageTitleViewDelegate {
+    func pageTitleView(_ titleView: PageTitleView, selectedIndex index: Int) {
+        pageContentView.setCurrentIndex(index)
+    }
+}
+
+// MARK:- 遵守PageContentViewDelegate 协议
+extension HomeViewController : PageContentViewDelegate{
+    func pageContentView(_ contentView: PageContentView, progress : CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
 }

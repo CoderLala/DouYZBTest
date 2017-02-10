@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionNormalCell" customModule="DouYZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="196" height="134"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="196" height="134"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_cate_normal" translatesAutoresizingMaskIntoConstraints="NO" id="iIL-1E-ryM">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="Nj6-dk-FDE"/>
+                            <constraint firstAttribute="width" constant="14" id="xfh-EH-mol"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直播直播直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgX-rP-x32">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="bSF-eh-BGI">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78F-9J-H3M">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZR-x2-wnT">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="直播在线观看人数" image="Image_online"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="iIL-1E-ryM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3WF-6U-SCf"/>
+                <constraint firstItem="DgX-rP-x32" firstAttribute="top" secondItem="bSF-eh-BGI" secondAttribute="bottom" constant="5" id="6Ti-cQ-INd"/>
+                <constraint firstItem="DgX-rP-x32" firstAttribute="centerY" secondItem="iIL-1E-ryM" secondAttribute="centerY" id="CGw-Oj-OMb"/>
+                <constraint firstAttribute="bottom" secondItem="iIL-1E-ryM" secondAttribute="bottom" constant="10" id="LnM-WG-Lej"/>
+                <constraint firstItem="zZR-x2-wnT" firstAttribute="bottom" secondItem="bSF-eh-BGI" secondAttribute="bottom" constant="-5" id="Qyu-G2-Uix"/>
+                <constraint firstItem="DgX-rP-x32" firstAttribute="leading" secondItem="iIL-1E-ryM" secondAttribute="trailing" constant="5" id="RC7-Y2-865"/>
+                <constraint firstAttribute="trailing" secondItem="bSF-eh-BGI" secondAttribute="trailing" id="RfT-Ha-8DA"/>
+                <constraint firstItem="zZR-x2-wnT" firstAttribute="trailing" secondItem="bSF-eh-BGI" secondAttribute="trailing" constant="-5" id="U57-7a-1H7"/>
+                <constraint firstItem="78F-9J-H3M" firstAttribute="bottom" secondItem="bSF-eh-BGI" secondAttribute="bottom" constant="-5" id="duE-tn-3rE"/>
+                <constraint firstAttribute="trailing" secondItem="DgX-rP-x32" secondAttribute="trailing" constant="16" id="g0Y-Om-NAD"/>
+                <constraint firstItem="78F-9J-H3M" firstAttribute="leading" secondItem="bSF-eh-BGI" secondAttribute="leading" constant="5" id="prS-YR-g7H"/>
+                <constraint firstItem="bSF-eh-BGI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="u7o-jh-BHP"/>
+                <constraint firstItem="bSF-eh-BGI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xgW-uz-e29"/>
+            </constraints>
+            <size key="customSize" width="196" height="134"/>
+            <connections>
+                <outlet property="iconImageView" destination="bSF-eh-BGI" id="cc4-M0-wEO"/>
+                <outlet property="nickNameLabel" destination="78F-9J-H3M" id="IQm-hS-f6b"/>
+                <outlet property="onlineBtn" destination="zZR-x2-wnT" id="LGw-z3-YqL"/>
+                <outlet property="roomNameLabel" destination="DgX-rP-x32" id="7m5-O9-Ewl"/>
+            </connections>
+            <point key="canvasLocation" x="168" y="96"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Image_online" width="16" height="16"/>
+        <image name="Img_default" width="172" height="103"/>
+        <image name="home_live_cate_normal" width="14" height="14"/>
+    </resources>
+</document>

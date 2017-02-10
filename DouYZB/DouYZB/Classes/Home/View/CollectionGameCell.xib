@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionGameCell" customModule="DouYZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1L1-Xb-DKT">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14.5" id="7N6-Ez-DT8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8pK-F3-HeC">
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="8pK-F3-HeC" secondAttribute="height" multiplier="1:1" id="hZl-zQ-nHs"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="25"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1L1-Xb-DKT" secondAttribute="bottom" constant="10" id="d7Y-Zx-1OL"/>
+                <constraint firstItem="1L1-Xb-DKT" firstAttribute="top" secondItem="8pK-F3-HeC" secondAttribute="bottom" constant="7" id="gr2-Ia-ZM7"/>
+                <constraint firstItem="1L1-Xb-DKT" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="i06-wn-qwp"/>
+                <constraint firstItem="8pK-F3-HeC" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="mB4-ZI-mrQ"/>
+                <constraint firstItem="8pK-F3-HeC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="vAP-en-xaL"/>
+            </constraints>
+            <size key="customSize" width="43" height="58"/>
+            <connections>
+                <outlet property="iconImageView" destination="8pK-F3-HeC" id="ztx-OX-f0X"/>
+                <outlet property="titleLabel" destination="1L1-Xb-DKT" id="ZWw-o3-AY7"/>
+            </connections>
+            <point key="canvasLocation" x="89.5" y="58"/>
+        </collectionViewCell>
+    </objects>
+</document>

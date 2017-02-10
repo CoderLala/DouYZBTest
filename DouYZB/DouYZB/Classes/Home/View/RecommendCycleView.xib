@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RecommendCycleView" customModule="DouYZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YQz-cQ-w5g">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="pk9-nz-prN">
+                        <size key="itemSize" width="0.0" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="Zfx-gF-jWE"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="ilT-fC-ccD"/>
+                    </connections>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="SNS-uH-mb9">
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="YQz-cQ-w5g" secondAttribute="bottom" id="5oa-WJ-0ZH"/>
+                <constraint firstAttribute="bottom" secondItem="SNS-uH-mb9" secondAttribute="bottom" id="R3R-Ag-OeE"/>
+                <constraint firstAttribute="trailing" secondItem="SNS-uH-mb9" secondAttribute="trailing" constant="10" id="abb-it-TMX"/>
+                <constraint firstAttribute="trailing" secondItem="YQz-cQ-w5g" secondAttribute="trailing" id="cst-ec-ptX"/>
+                <constraint firstItem="YQz-cQ-w5g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fYT-kx-QLy"/>
+                <constraint firstItem="YQz-cQ-w5g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tC5-I6-pqr"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="YQz-cQ-w5g" id="6xO-de-a3P"/>
+                <outlet property="pageControl" destination="SNS-uH-mb9" id="ELD-nk-a0O"/>
+            </connections>
+            <point key="canvasLocation" x="58" y="-17"/>
+        </view>
+    </objects>
+</document>
